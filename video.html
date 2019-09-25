@@ -6,11 +6,7 @@
     <p>This sample demonstrates how to start a meeting using Webex JS-SDK in the browser.</p>
 
     <form id="destination">
-      <input
-        id="invitee"
-        name="invitee"
-        placeholder="Person ID or Email Address or SIP URI or Room ID"
-        type="text">
+     
         <input title="join" type="submit" value="join">
     </form>
 
@@ -22,8 +18,15 @@
       </div>
     </div>
 
+    <video id="leftVideo" playsinline controls muted loop>
+      <!-- NB CORS: https://bugzilla.mozilla.org/show_bug.cgi?id=1177793 -->
+      <source src="./video/chrome.webm" type="video/webm"/>
+      <source src="./video/chrome.mp4" type="video/mp4"/>
+      <p>This browser does not support the video element.</p>
+  </video>
+
     <button id="hangup" title="hangup" type="button">cancel/hangup</button>
 
-    <script src="./index.js"></script>
+    <script src="./video.js"></script>
   </body>
 </html>
